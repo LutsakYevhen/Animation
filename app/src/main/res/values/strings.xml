@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">SomeAnimation</string>
+    <string name="text_animation_example">ANIMATION</string>
+    <string name="alpha_button">Alpha</string>
+    <string name="rotate_button">rotate</string>
+    <string name="scale_button">scale</string>
+    <string name="translate_button">translate</string>
+    <string name="animation">Animation</string>
+    <string name="animator">Animator</string>
+    <string name="view_property_animator">ViewPropertyAnimator</string>
+    <string name="program">Programmatically</string>
+    <string name="xml">XML</string>
 </resources>

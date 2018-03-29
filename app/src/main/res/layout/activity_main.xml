@@ -7,12 +7,137 @@
     tools:context="com.example.lutsak.someanimation.MainActivity">
 
     <TextView
+        android:id="@+id/animator_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/text_animation_example"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="50dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/animation"
+        style="@style/text_animation_style"
+        android:text="@string/animation"
+        app:layout_constraintBottom_toTopOf="@+id/view_property_animator"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/animator"
+        style="@style/text_animation_style"
+        android:text="@string/animator"
+        app:layout_constraintBottom_toTopOf="@+id/animation_alpha"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/view_property_animator"
+        style="@style/text_animation_style"
+        android:text="@string/view_property_animator"
+        app:layout_constraintBottom_toTopOf="@+id/animator"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/animation_alpha"
+        style="@style/button"
+        android:text="@string/alpha_button"
+        app:layout_constraintBottom_toTopOf="@+id/animation_rotate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/animation_rotate"
+        style="@style/button"
+        android:text="@string/rotate_button"
+        app:layout_constraintBottom_toTopOf="@+id/animation_scale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/animation_scale"
+        style="@style/button"
+        android:text="@string/scale_button"
+        app:layout_constraintBottom_toTopOf="@+id/animation_translate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/animation_translate"
+        style="@style/button"
+        android:text="@string/translate_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/text_animation_style"
+        android:text="@string/xml"
+        app:layout_constraintBottom_toTopOf="@+id/programmatically"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/programmatically"
+        style="@style/text_animation_style"
+        android:text="@string/program"
+        app:layout_constraintBottom_toTopOf="@+id/animation"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/animation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/programmatically" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <RadioButton
+            android:id="@+id/radioButtonAnimation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/radioButtonViewPropertyAnimator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAnimator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonXML"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/radioButtonProgrammatically"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </RadioGroup>
+
 
 </android.support.constraint.ConstraintLayout>
