@@ -8,6 +8,4 @@
     <string name="animation">Animation</string>
     <string name="animator">Animator</string>
     <string name="view_property_animator">ViewPropertyAnimator</string>
-    <string name="program">Programmatically</string>
-    <string name="xml">XML</string>
 </resources>
